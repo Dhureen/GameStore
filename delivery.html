@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>DIE-HARD:THE STORE</title>
+  <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <style>
+       .navbar {
+    margin-bottom: 0;
+    background-color: #2d2d30;
+    border: 0;
+    font-size: 11px !important;
+    letter-spacing: 4px;
+    opacity:0.9;
+}
+
+/* Add a gray color to all navbar links */
+.navbar li a, .navbar .navbar-brand {
+    color: #d5d5d5 !important;
+}
+
+/* On hover, the links will turn white */
+.navbar-nav li a:hover {
+    color: #fff !important;
+}
+
+/* The active link */
+.navbar-nav li.active a {
+    color: #fff !important;
+    background-color:#29292c !important;
+}
+
+/* Remove border color from the collapsible button */
+.navbar-default .navbar-toggle {
+    border-color: transparent;
+}
+
+/* Dropdown */
+.open .dropdown-toggle {
+    color: #fff ;
+    background-color: #555 !important;
+}
+
+/* Dropdown links */
+.dropdown-menu li a {
+    color: #000 !important;
+}
+
+/* On hover, the dropdown links will turn red */
+.dropdown-menu li a:hover {
+    background-color: red !important;
+}
+footer {
+    background-color: #2d2d30;
+    color: #f5f5f5;
+    padding: 32px;
+}
+
+footer a {
+    color: #f5f5f5;
+}
+
+footer a:hover {
+    color: #777;
+    text-decoration: none;
+}
+a {
+    text-decoration: none;
+}
+div.place-order-right {
+    padding-left: 40px;
+    border-left: 1px solid #eeeeee;
+}
+div.no-padding {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+}
+.col-md-12 {
+    width: 100%;
+}
+body {
+    font-family: "Roboto",sans-serif !important;
+    font-size: 13px !important;
+    font-weight: 300;
+}
+div.place-form label {
+    font-weight: 300;
+    font-size: 15px;
+    width: 100%;
+    margin: 12px 0px 2px 5px;
+}
+label {
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 5px;
+    font-weight: 700;
+    padding-top: 10px;
+}
+input.name-txt {
+    border: 1px solid #ccc;
+    width: 100%;
+    height: 44px;
+    border-radius: 3px;
+    padding-left: 10px;
+}
+input, button, select, textarea {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+label {
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 5px;
+    font-weight: 700;
+    padding-top: 10px;
+}
+element {
+    display: inline;
+    position: relative;
+    float: none;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: auto;
+}
+input.name-txt {
+    border: 1px solid #ccc;
+    width: 100%;
+    height: 44px;
+    border-radius: 3px;
+    padding-left: 10px;
+}
+input, button, select, textarea {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+div.place-form label {
+    font-weight: 300;
+    font-size: 15px;
+    width: 100%;
+    margin: 12px 0px 2px 5px;
+}
+textarea.textarea_txt {
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    height: 100px;
+}
+a.plc-order {
+    background: #003791;
+    width: 225px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+    color: #FFF;
+    padding: 10px 0px;
+    display: block;
+    text-decoration: none;
+    border-radius: 3px;
+}
+div.delivery-txt {
+    padding: 30px 0px 30px 0px;
+    font-size: 15px;
+    clear: both;
+}
+ </style>   
+ <script language="JavaScript">
+
+function postcode_validate(zipcode)
+{
+
+    var regPostcode = /^([1-9])([0-9]){5}$/;
+
+    obj = document.getElementById("pincode");
+
+    if(regPostcode.test(zipcode) == false)
+    {
+
+        alert("invalid pincode");
+
+    }
+    
+
+}
+
+</script> 
+</head>
+<body>
+     <nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Logo</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="#band">BUY</a></li>
+        <li><a href="index.html/#rent-section">RENT</a></li>
+        <li><a href="#contact1">CONTACT</a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">MORE
+            <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Login</a></li>
+            <li><a href="#">Signup</a></li>
+          </ul>
+        </li>
+        <li><a href="#"><span class="glyphicon glyphicon-search"></span></a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="container" style="margin-top:60px;margin-bottom:40px;">
+    <div class="col-md-3">
+    </div>    
+    <div class="col-md-6 place-order-right ">
+          <h3 class="place-order-head">Delivery Address:</h3>
+          <div class="row clearfix no-margin">
+            <div class="col-md-12 no-padding">
+              <div class="place-form">
+		 <form name="form" id="form" action="/cart/placeorder" method="post"  class="Zebra_Form"><div class="hidden"><input type="hidden" name="valid_coupon" id="valid_coupon" value="0"><input type="hidden" name="valid_gift_card_id" id="valid_gift_card_id" value=""><input type="hidden" name="valid_coupon_amt" id="valid_coupon_amt" value="0"><input type="hidden" name="wallet_cashback" id="wallet_cashback" value="0"><input type="hidden" name="name_form" id="name_form" value="form"><label for="zebra_honeypot_form" style="display:none">Leave this field blank</label><input type="text" name="zebra_honeypot_form" id="zebra_honeypot_form" value="" class="control text" autocomplete="off"></div>                 
+                  <label>Name</label>
+                  <input type="text" name="name" id="name"  class="control text name-txt">                                    <label>Address</label>
+                  <textarea name="address" id="address" rows="5" cols="80" class="control textarea_txt show-character-counter" maxlength="140"></textarea>                  <label>Landmark (optional)</label>
+                  <input type="text" name="landmark" id="landmark"  class="control text name-txt">                  <label>Pincode <span  id="invalid_pincode" style="display:none;color:red">Sorry We dont have delivery in this area</span></label>
+                  <input type="text" name="pincode" id="pincode"  class="control text name-txt" onkeyup="postcode_validate(this.value);" maxlength="6">                  <div class="col-md-12 no-padding">
+                    <div class="col-md-6 no-padding-left">
+                      <label>City</label>
+                      <select name="city" id="city" class="control form-control text name-txt" style="height:44px;font-weight: normal;"><option value="">- select -</option><option value="Hyderabad">Hyderabad</option><option value="Delhi">Delhi</option><option value="Ahmedabad">Ahmedabad</option><option value="Surat">Surat</option><option value="Bangalore" selected="selected">Bangalore</option><option value="Indore">Indore</option><option value="Mumbai">Mumbai</option><option value="Pune">Pune</option><option value="Chandigarh">Chandigarh</option><option value="Jaipur">Jaipur</option><option value="Chennai">Chennai</option><option value="Kolkata">Kolkata</option></select>                    <!--input type="text" id="city" name="city" class="control text name-txt" value="Bangalore" readonly="readonly" style="background-color: #F7F7F7;" /-->
+                    </div>
+                   <div class="col-md-6 no-padding-right">
+                      <label>State</label>
+                     <input type="text" id="state" name="state" class="control text name-txt" value="Karnataka" readonly="readonly" style="background-color: #F7F7F7;" />
+                    </div>
+                  </div>
+                  <div id="div_time_of_delivery" style="display:none;">
+                  <label>Preferred time of delivery</label>
+                  <div class="dropdown ">  
+                      <select name="time_of_delivery" id="time_of_delivery" class="control form-control text name-txt" style="height:44px;font-weight: normal;"><option value="any">Any Time</option><option value="10am-1pm">10 am - 1 pm</option><option value="1pm-3pm">1 pm - 3 pm</option><option value="3pm-6pm">3 pm - 6 pm</option><option value="After 6pm">After 6 pm</option></select>                  </div>
+                  </div>    
+                  <label style="margin-top: 0px;">&nbsp;</label>
+                  <div class="col-md-12 no-padding">
+                    <div class="col-md-1 no-padding-left">
+                      <label>+91</label>
+                    </div>
+                    <div class="col-md-11 no-padding-right">
+                      <input type="text" name="mobile" id="mobile"  class="control text name-txt"  maxlength="10">                    </div>
+                  </div>
+	                                    <div class="delivery-txt">
+                      Mode of Payment: &nbsp;&nbsp;&nbsp;<br/>
+                                            <input type="radio" id="for_ponline"  name="payment_mode" checked value="online">&nbsp;
+                      <span style="cursor: pointer" class="delivery" onclick="$('#for_ponline').click()">Pay using Debit Card/CreditCard/Netbanking</span><br/>
+                      <input id="for_pcod" type="radio" name="payment_mode"   value="cod" class="hide_cod">&nbsp;
+                      <span style="cursor: pointer"  class="delivery hide_cod" onclick="$('#for_pcod').click()" >Cash on Delivery</span>&nbsp;&nbsp;
+                      
+                  </div>
+                  </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+    </div>
+ </div>       
+<footer class="text-center">
+  <a class="up-arrow" href="#myCarousel" data-toggle="tooltip" title="TO TOP">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a><br><br>
+  <p>Bootstrap Theme Made By Darshan</p>
+</footer>
+
+</body>
+</html>

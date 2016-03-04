@@ -1,0 +1,205 @@
+ <!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/filter.css" rel="stylesheet" type="text/css" media="all" />
+
+<link href='http://fonts.googleapis.com/css?family=Montserrat+Alternates:400,700' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'>
+
+<script src="js/jquery-1.10.2.js"></script>
+
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />	
+
+
+
+  <script>
+  $(document).ready(function(){
+    $('.category').on('change', function(){
+      var category_list = [];
+      $('#filters :input:checked').each(function(){
+        var category = $(this).val();
+        category_list.push(category);
+      });
+
+      if(category_list.length == 0)
+        $('.resultblock').fadeIn();
+      else {
+        $('.resultblock').each(function(){
+          var item = $(this).attr('data-tag');
+          if(jQuery.inArray(item,category_list) > -1)
+            $(this).fadeIn('slow');
+          else
+            $(this).hide();
+        });
+      }   
+    });
+  }); 
+  </script>
+</head>
+<body> 
+<!--header-->	
+<div class="header" >
+	<div class="top-header"  style="background:#112233; height:60px; padding-top:15px; ">		
+		<div class="container">
+		<div class="top-head" >	
+			<ul class="header-in">
+				<li><a href="contact.html">   Contact Us</a></li>
+				<li ><a href="loginframe.html" >   Sign In</a></li>
+                <li ><a href="signupframe.html" >   Create Account</a></li>
+			</ul>
+			
+				
+			
+				<div class="clearfix"> </div>
+		</div>
+		</div>
+	</div>
+		<!---->
+	
+		<div class="header-top">
+		<div class="container">
+		<div class="head-top">
+			<div class="logo">
+				<h1><a href="index.html"><span><image src="logo2.png"></span></h1>
+
+			</div>
+		<div class="top-nav">		
+			  
+				
+					<ul>
+						<li><a class="color2" href="index.html"  >Home</a></li>
+						<li><a class="color2" href="games.html"  >Games</a></li>
+						<li><a class="color2" href="reviews.html"  >Reviews</a></li>
+						<li class="active"><a class="color1" href="categories.html" >Categories</a></li>
+                        <li><a class="color2" href="platforms.html" >Platforms</a></li>
+						
+						<div class="clearfix"> </div>
+					</ul>
+
+					<!--script-->
+				
+
+				</div>
+				
+				<div class="clearfix"> </div>
+		</div>
+		</div>
+	</div>
+</div>
+
+<!--content-->
+<div>
+	<div class="container">
+	  <h2>Categories</h2>
+	  <hr>
+	  <div class="container">
+	  	<div id="filters">
+	 		<div class="filterblock">
+		 		  <input id="check1" name="check" value="action" class="category" type="checkbox">
+	    		<label for="check1">Action</label>
+		 	</div>
+
+	 		<div class="filterblock">
+		 		  <input id="check2" name="check" value="adventure" class="category" type="checkbox">
+	    		<label for="check2">Adventure</label>
+		 	</div>
+
+		 	<div class="filterblock">
+		 		  <input id="check3" name="check" value="rpg" class="category" type="checkbox">
+	    		<label for="check3">RPG</label>
+		 	</div>
+	 		<div class="filterblock">
+		 		  <input id="check4" name="check" value="racing" class="category" type="checkbox">
+	    		<label for="check4">Racing</label>
+		 	</div>
+
+	 		<div class="filterblock">
+		 		  <input id="check5" name="check" value="strategy" class="category" type="checkbox">
+	    		<label for="check5">Strategy</label>
+		 	</div>
+
+		 	<div class="filterblock">
+		 		  <input id="check6" name="check" value="mmo" class="category" type="checkbox">
+	    		<label for="check6">MMO</label>
+		 	</div>
+	 		<div class="filterblock">
+		 		  <input id="check7" name="check" value="puzzle" class="category" type="checkbox">
+	    		<label for="check7">Puzzle</label>
+		 	</div>
+
+	 		<div class="filterblock">
+		 		  <input id="check8" name="check" value="fighting" class="category" type="checkbox">
+	    		<label for="check8">Fighting</label>
+		 	</div>
+
+		 	<div class="filterblock">
+		 		  <input id="check9" name="check" value="misc" class="category" type="checkbox">
+	    		<label for="check9">Misc.</label>
+		 	</div>
+	 	</div>
+	  </div>
+	 <br />
+
+	<div class="searchresults">
+ 		
+ 		<div class="resultblock" data-tag="action">
+ 			<a href="bf4.html"><img src="images/bf.png" class="itemimg"> </a>
+ 			<div class="desc">
+ 				<div class="desc_text">
+ 					Battlefield 4 is a 2013 first-person shooter video game developed by Swedish video game developer EA Digital Illusions CE (DICE) and published by Electronic Arts. It is a sequel to 2011's Battlefield 3 and was released on October 29, 2013 in North America, October 31, 2013 in Australia, November 1, 2013 in Europe and New Zealand and November 7, 2013 in Japan for Microsoft Windows, PlayStation 3, PlayStation 4, Xbox 360 and Xbox One.
+ 				</div>
+ 			</div>
+ 		</div>
+ 		<div class="resultblock" data-tag="fighting">
+ 			<img src="images/mortal.png" class="itemimg"> 				
+ 			<div class="desc">
+ 				<div class="desc_text">
+				Who's next? Experience the Next Generation of the #1 Fighting Franchise. Mortal Kombat X combines unparalleled, cinematic presentation with all new gameplay. For the first time, players can choose from multiple variations of each character impacting both strategy and fighting style.  				</div>
+ 			</div>
+ 		</div>
+ 		<div class="resultblock" data-tag="strategy">
+ 			<img src="images/arma3.png" class="itemimg"> 				
+ 			<div class="desc">
+ 				<div class="desc_text">
+				Experience true combat gameplay in a massive military sandbox. Deploying a wide variety of single- and multiplayer content, over 20 vehicles and 40 weapons, and limitless opportunities for content creation, this is the PC’s premier military game. Authentic, diverse, open - Arma 3 sends you to war.  </div>
+ 			</div>
+ 		</div>
+ 		<div class="resultblock" data-tag="rpg">
+ 			<img src="images/skyrim.png" class="itemimg"> 				
+ 			<div class="desc">
+ 				<div class="desc_text">
+The next chapter in the highly anticipated Elder Scrolls saga arrives from the makers of the 2006 and 2008 Games of the Year, Bethesda Game Studios. Skyrim reimagines and revolutionizes the open-world fantasy epic, bringing to life a complete virtual world open for you to explore any way you choose.  				</div>
+ 			</div>
+ 		</div>
+ 		<div class="resultblock" data-tag="game">
+ 			<a href="mgsv.html"><img src="images/mgsv.png" class="itemimg"></a>
+ 			<div class="desc">
+ 				<div class="desc_text">
+Konami Digital Entertainment continues forth the ‘METAL GEAR SOLID V Experience’ with the latest chapter, METAL GEAR SOLID V: The Phantom Pain. Ushering in a new era for the franchise with cutting-edge technology powered by the Fox Engine, MGSV: The Phantom Pain will provide players a first-rate gaming experience as they are offered tactical freedom to carry out open-world missions.
+ 				</div>
+ 			</div>
+ 		</div>
+ 	</div>
+
+					  	
+	</div> 	
+</div>
+	<!---->
+	<div class="footer"  style=" padding-top:20px;">
+	<div class="footer-middle">
+				<div class="container" style="align: centre;">
+					<div class="footer-middle-in">
+					
+						<h6>About us</h6>
+						<p>A portal to explore a variety of video games.</p>
+                                        
+					</div>
+					
+					<div class="clearfix"> </div>
+				</div>
+			</div>
+		</div>
+</body>
+</html>

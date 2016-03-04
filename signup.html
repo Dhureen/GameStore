@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    
+    
+    
+    
+        <link rel="stylesheet" href="css/login_signup_style.css">
+        <script type="text/javascript">
+        
+        function validate(){
+        
+        var user = document.getElementById("login__username").value;
+        var pass = document.getElementById("login__password").value;
+		var cpass = document.getElementById("login__confirmpassword").value;
+        var email = document.getElementById("login__email").value;
+		
+		var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+		
+        if(user.length < 5 || user.match(/^[a-zA-Z0-9_]*$/) == -1)
+            alert("Only alphanumeric characters and _ allowed in Username with at least 5");
+        
+        else if(pass.length < 5)
+			alert("Minimum 5 characters to be used in Password field");
+		else if(cpass != pass)
+			alert("Passwords do not match. Try again.");
+		else if(email.match(re) == -1)
+			alert("Invalid email format or incorrect usage of characters");
+			
+		}
+        </script>
+
+    
+    
+    
+  </head>
+
+
+ <body style = "background-color: #112233;" >
+  <div class="site__container">
+
+    <div class="grid__container">
+
+      <form action="" method="post" class="form form--login">
+		Username
+        <div class="form__field">
+          <input id="login__username" type="text" class="form__input" placeholder="Enter the username." required>
+        </div>
+		Password
+        <div class="form__field">
+          <input id="login__password" type="password" class="form__input" placeholder="Enter the password" required>
+        </div>
+         Confirm Password
+         <div class="form__field">
+          <input id="login__confirmpassword" type="password" class="form__input" placeholder="Re-enter password for confirmation" required>
+        </div>
+        Email
+        <div class="form__field">
+          <input id="login__email" type="text" class="form__input" placeholder="abc@xyz.com" required>
+        </div>
+
+
+        <div class="form__field">
+          <input type="submit" value="Create Account" onclick="validate()">
+        </div>
+        
+
+      </form>
+
+      <p class="text--center">Already a member? <a href="login.html">Sign in now</a> <span class="fontawesome-arrow-right"></span></p>
+
+    </div>
+
+  </div>
+  </body>
+</html>

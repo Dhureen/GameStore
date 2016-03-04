@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+
+<link href='http://fonts.googleapis.com/css?family=Montserrat+Alternates:400,700' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'>
+
+<script src="js/jquery-1.10.2.js"></script>
+
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />	
+
+<style>
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+tr:hover{background-color:#f5f5f5}
+</style>
+</head>
+<body> 
+<!--header-->	
+<div class="header" >
+	<div class="top-header"  style="background:#112233; height:60px; padding-top:15px; ">		
+		<div class="container">
+		<div class="top-head" >	
+			<ul class="header-in">
+				<li><a href="contact.html">   Contact Us</a></li>
+				<li ><a href="loginframe.html" >   Sign In</a></li>
+                <li ><a href="signupframe.html" >   Create Account</a></li>
+			</ul>
+			
+				
+			
+				<div class="clearfix"> </div>
+		</div>
+		</div>
+	</div>
+		<!---->
+	
+		<div class="header-top">
+		<div class="container">
+		<div class="head-top">
+			<div class="logo">
+				<h1><a href="index.html"><span><image src="logo2.png"></span></h1>
+
+			</div>
+		<div class="top-nav">		
+			  
+				
+					<ul>
+						<li><a class="color2" href="index.html"  >Home</a></li>
+						<li class="active"><a class="color1" href="games.html"  >Games</a></li>
+						<li><a class="color2" href="reviews.html"  >Reviews</a></li>
+						<li><a class="color2" href="categories.html" >Categories</a></li>
+                        <li><a class="color2" href="platforms.html" >Platforms</a></li>
+						
+						<div class="clearfix"> </div>
+					</ul>
+
+					
+				</div>
+				
+				<div class="clearfix"> </div>
+		</div>
+		</div>
+	</div>
+</div>
+
+<!--content-->
+	<div class="container">
+	  <div class="games">		
+			<h2 >Games</h2>
+
+			<div class="container">
+                <form action="#" method="get" id="searchForm">
+                   	 	<input type="text" class="form-control" name="x" placeholder="Search term...">
+                        <select name="search_param" id="search_param">
+                            <option value="all">All</option>
+                            <option value="genre">Genre</option>
+                            <option value="rating">Rating</option>
+                            <option value="platform">Platform</option>
+                            <option value="developer">Platform</option>
+                            <option value="publisher">Platform</option>
+                            <option value="release">Release Date</option>
+                        </select>
+                       	<input type="submit">
+                </form><!-- end form -->     
+            </div><!-- end col-xs-8 -->       
+
+			<table width="1140" height="132" border="2" cellpadding="3" cellspacing="3" style="tr:hover {background-color: #f5f5f5};">
+			  <caption>
+			  <strong> Game Listing </strong>
+			  </caption>
+               <tr align="center">
+			      <th>Title</th>
+			      <th>Genre</th>
+			      <th>Rating</th>
+                  <th>Platform</th>
+                  <th>Developer</th>
+                  <th>Publisher</th>
+				  <th>Release Date</th>     
+		        </tr>
+			    <tr>
+			      <td>Battlefield 4</td>
+			      <td>Action FPS</td>
+			      <td>9</td>
+			      <td>PC Xbox PS4</td>
+			      <td>EA Digital Illusions CE</td>
+			      <td>Electronic Arts</td>
+			      <td>October 29, 2013</td>
+		        </tr>
+			    <tr>
+			      <td>Mortal Kombat X</td>
+			      <td>Fighting</td>
+			      <td>9</td>
+			      <td>PC Xbox PS4</td>
+			      <td>NetherRealm Studios</td>
+			      <td>Warner Bros. Interactive Entertainment
+                  </td>
+			      <td>April 14, 2015</td>
+		        </tr>
+			    <tr>
+			      <td>Arma 3</td>
+			      <td>Strategy</td>
+			      <td>8</td>
+			      <td>PC</td>
+			      <td>Bohemia Interactive</td>
+			      <td>Bohemia Interactive</td>
+			      <td>September 12, 2013</td>
+		        </tr>
+                <tr>
+			      <td>The Elder Scrolls V: Skyrim</td>
+			      <td>RPG</td>
+			      <td>10</td>
+			      <td>PC Xbox PS3</td>
+			      <td>Bethesda Game Studios</td>
+			      <td>Bethesda Softworks</td>
+			      <td>June 4, 2013</td>
+		        </tr>
+	    </table>
+			
+	    </div>
+	</div>
+	<!---->
+	<div class="footer"  style=" padding-top:20px;">
+	<div class="footer-middle">
+				<div class="container" style="align: centre;">
+					<div class="footer-middle-in">
+					
+						<h6>About us</h6>
+						<p>A portal to explore a variety of video games.</p>
+                                        
+					</div>
+					
+					<div class="clearfix"> </div>
+				</div>
+			</div>
+		</div>
+</body>
+</html>

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+<script src="js/jquery-1.10.2.js"></script>
+
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />	
+
+<link href='http://fonts.googleapis.com/css?family=Montserrat+Alternates:400,700' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'>
+
+<style>
+blockquote.style2 {
+    width: 490px;
+    margin: 0px;
+    padding: 30px;
+    background: #C6E0FB top left repeat;
+    -moz-border-radius: 4px 4px 4px 4px;
+    -webkit-border-radius: 4px;
+    -goog-ms-border-radius: 4px 4px 4px 4px;
+    border-radius: 4px 4px 4px 4px;
+    quotes: "\201C" "\201D";
+}
+</style>
+
+<script type="text/javascript">
+           function changeRating(){
+		var rating= document.getElementById("rating").value;
+	
+            	document.getElementById("ratingpreview").innerHTML = rating;
+	}
+	function changePlatform(){
+		var platform= document.getElementById("platform").value;
+	
+            	document.getElementById("platformpreview").innerHTML = platform;
+	}
+	function changeReview(){
+		var rating= document.getElementById("review").value;
+	
+            	document.getElementById("reviewpreview").innerHTML = rating;
+	}
+</script>
+<script type="text/javascript">
+
+                     
+
+                     function validate(){
+                     var title =  document.getElementById("title").value;
+                     var rating = document.getElementById("rating").value;
+                     var platform = document.getElementById("platform").value;
+                     var text = document.getElementById("review").value;
+                        if(!(title.match(/^\w+$/)))
+                          alert("Invalid Title");
+                        else if(platform.options.selectIndex == 0)
+                          alert("Select a platform")
+                        else if(!(rating.match(/^[0-9]{1,2}$/) && (rating >=1 && rating <=10)))  
+                          alert("Invalid Rating");
+                     }        
+          
+ </script>
+                     
+</head>
+<body> 
+<!--header-->	
+<div class="header" >
+	<div class="top-header"  style="background:#112233; height:60px; padding-top:15px; ">		
+		<div class="container">
+		<div class="top-head" >	
+			<ul class="header-in">
+				<li><a href="contact.html">   Contact Us</a></li>
+				<li ><a href="loginframe.html" >   Sign In</a></li>
+                <li ><a href="signupframe.html" >   Create Account</a></li>
+			</ul>
+			
+				
+			
+				<div class="clearfix"> </div>
+		</div>
+		</div>
+	</div>
+		<!---->
+	
+		<div class="header-top">
+		<div class="container">
+		<div class="head-top">
+			<div class="logo">
+				<h1><a href="index.html"><span><image src="logo2.png"></span></h1>
+
+			</div>
+		<div class="top-nav">		
+			  
+				
+					<ul>
+						<li><a class="color2" href="index.html"  >Home</a></li>
+						<li><a class="color2" href="games.html"  >Games</a></li>
+						<li class="active"><a class="color1" href="reviews.html"  >Reviews</a></li>
+						<li><a class="color2" href="categories.html" >Categories</a></li>
+                                                <li><a class="color2" href="platforms.html" >Platforms</a></li>
+						
+						<div class="clearfix"> </div>
+					</ul>
+
+
+
+				</div>
+				
+				<div class="clearfix"> </div>
+		</div>
+		</div>
+	</div>
+</div>
+<!--content-->
+	
+
+<div class="container">
+        
+        <div style="padding-bottom:10px;"> <h2>User Review</h2></div>
+        <div class="col md-6">
+          
+                    
+            <form action="" method="post" class="form form--login">
+
+                  <input type="text" id="title" placeholder="Enter game title" required><br />
+
+                  <select id ="platform" onchange="changePlatform()">
+                    <option value="PC">PC</option>
+                    <option value="PlayStation">PlayStation</option>
+                    <option value="Xbox">Xbox</option>
+                  </select><br />
+
+                  <input type="text" id="rating" placeholder="Rate out of 10" required onchange="changeRating()"><br />
+            
+                <div class = "right" >
+                  <h5>Enter review</h5>
+
+                  <textarea id="review" placeholder="Add comments:" onchange="changeReview()"></textarea>
+                </div> 
+
+                  <input type="button" value="Submit" onclick="validate();">
+
+            </form>
+             
+      </div>
+
+      <hr />
+      
+      <div class="col md-6">
+          
+                       <h2>Review Preview</h2></div> 
+                       <ul style="list-style-type: none;">
+                       <li style="font-weight:bold; font-size:20px;" id="titlepreview"> 
+                      
+                       </li>
+                       <li id="platformpreview">
+                         <h3></h3>
+                       </li>
+                       <li>
+                       <hr />
+                            <blockquote class="style2"> 
+                               <div id="reviewpreview"></div>
+                              <div style=" text-align: center; color: #262626; float: right; margin-left: 15px;"><span>Rating: </span><strong id="ratingpreview"></strong>
+                              </div>     
+                            </blockquote> 
+                      </li>       
+                       <hr />
+                  </ul>
+             
+      </div>
+            
+</div>
+    
+	<!---->
+	<div class="footer"  style=" padding-top:20px;">
+	<div class="footer-middle">
+				<div class="container" style="align: centre;">
+					<div class="footer-middle-in">
+					
+						<h6>About us</h6>
+						<p>A portal to explore a variety of video games.</p>
+                                        
+					</div>
+					
+					<div class="clearfix"> </div>
+				</div>
+			</div>
+		</div>
+</body>
+</html>
